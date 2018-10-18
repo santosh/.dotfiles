@@ -1,13 +1,18 @@
-alias ls='ls -A --color=auto'
+mcd() {
+    mkdir $1 && cd $1
+}
+
+alias ls='ls -AF --color=auto'
 alias q='exit'
 alias balias='vi ~/.aliases && source ~/.aliases'
-alias rm='rm -rv'
+alias rm='rm -rfv'
 alias py='python'
 alias vimrc='vim ~/.vim/vimrc'
 alias mv='mv -v'
-alias 3='python3'
+alias 3='/home/santosh/bin/python3'
 alias 2='python2'
 alias shutdown='sudo shutdown --poweroff now'
-alias cp='cp -v'
+alias cp='cp -rv'
+alias wget='wget --continue'
 
 # vim: ft=sh

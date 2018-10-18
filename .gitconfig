@@ -2,8 +2,12 @@
 	email = sntshkmr60@gmail.com
 	name = Santosh Kumar
 [push]
-	default = matching
+    default = current
 [color]
     ui = auto
 [core]
     editor = vim
+[diff]
+	tool = vimdiff
+[alias]
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
