@@ -20,6 +20,10 @@ fi
 
 # added by Anaconda3 installer
 export PATH="/home/santosh/anaconda3/bin:$PATH"
+export PATH=$HOME/.local/bin:$PATH:$HOME/bin
+export GOPATH=$HOME/.go
+
+# Hook a go executable after creating
 
 # colors!
 green="\[\033[0;32m\]"

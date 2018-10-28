@@ -19,7 +19,12 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-export EDITOR=vi
+export EDITOR=vim
+
+export PATH=$HOME/.local/bin:$PATH:$HOME/bin
+export GOPATH=$HOME/.go
+
+# Hook a go executable after creating
 
 bindkey '^[[5~' history-beginning-search-backward
 bindkey '^[[6~' history-beginning-search-forward
