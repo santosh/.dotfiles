@@ -23,6 +23,8 @@ export PATH="/home/santosh/anaconda3/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH:$HOME/bin
 export GOPATH=$HOME/.go
 
+export PYTHONSTARTUP=$HOME/.config/python/python-startup.py
+
 # Hook a go executable after creating
 
 # colors!
