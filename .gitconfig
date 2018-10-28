@@ -11,3 +11,4 @@
 	tool = vimdiff
 [alias]
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+    ls = "status"
