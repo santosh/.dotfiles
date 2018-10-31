@@ -19,11 +19,11 @@ if [ -f ~/.aliases ]; then
 fi
 
 # added by Anaconda3 installer
-export PATH="/home/santosh/anaconda3/bin:$PATH"
+export PATH="$HOME/anaconda3/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH:$HOME/bin
 export GOPATH=$HOME/.go
 
-export PYTHONSTARTUP=$HOME/.config/python/python-startup.py
+export PYTHONSTARTUP=$HOME/.dotfiles/python-startup.py
 
 # Hook a go executable after creating
 
@@ -34,7 +34,7 @@ purple="\[\033[0;35m\]"
 reset="\[\033[0m\]"
 
 # Change command prompt
-source ~/git-prompt.sh
+source ~/.dotfiles/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
