@@ -1,0 +1,33 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.smoothScrolling": true,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordWrapColumn": 72,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "editor.mouseWheelZoom": true,
+    "workbench.iconTheme": "vscode-icons",
+    "window.titleBarStyle": "custom",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.formatOnSave": true,
+    "workbench.sideBar.location": "right",
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "breadcrumbs.enabled": true,
+    "workbench.colorTheme": "Monokai",
+    "explorer.confirmDelete": false,
+    "git.autofetch": true,
+    "editor.wordWrap": "on",
+    "[html],[css],[javascript]": {
+        "editor.tabSize": 2,
+        "editor.autoIndent": false
+    },
+    "[html]": {
+        "editor.wordWrap": "off",
+    },
+    "editor.fontSize": 13,
+    "diffEditor.ignoreTrimWhitespace": true,
+}
