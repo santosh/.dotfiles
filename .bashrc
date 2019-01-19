@@ -21,6 +21,8 @@ fi
 # added by Anaconda3 installer
 export PATH="$HOME/anaconda3/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH:$HOME/bin
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export GOPATH=$HOME/.go
 
 export PYTHONSTARTUP=$HOME/.dotfiles/python-startup.py
