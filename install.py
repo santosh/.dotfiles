@@ -37,3 +37,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+class SetupZSH:
+    def __init__(self):
+        pass
+
+
+class SetupVim:
+    def __init__(self):
+        pass

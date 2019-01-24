@@ -30,4 +30,5 @@
     },
     "editor.fontSize": 13,
     "diffEditor.ignoreTrimWhitespace": true,
+    "terminal.integrated.rendererType": "dom",
 }

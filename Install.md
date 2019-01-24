@@ -1,0 +1,9 @@
+- VirtualBox
+- Calibre?
+- Zsh
+- qBittorrent (Double click opens a folder, don't stack up/download)
+- Blender
+- Skype
+- Teamviewer
+- Chrome
+- GIMP
