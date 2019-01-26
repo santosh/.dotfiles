@@ -31,4 +31,6 @@
     "editor.fontSize": 13,
     "diffEditor.ignoreTrimWhitespace": true,
     "terminal.integrated.rendererType": "dom",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "files.eol": "\n",
 }
