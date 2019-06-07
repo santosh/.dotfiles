@@ -13,7 +13,6 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # User specific aliases and functions
-
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
@@ -22,10 +21,6 @@ fi
 export PATH="$HOME/anaconda3/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH:$HOME/bin
 export GOPATH=$HOME/.go
-
-export PYTHONSTARTUP=$HOME/.dotfiles/python-startup.py
-
-# Hook a go executable after creating
 
 # colors!
 green="\[\033[0;32m\]"
