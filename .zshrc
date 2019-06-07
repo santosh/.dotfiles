@@ -24,8 +24,7 @@ export EDITOR=vim
 export PATH=$HOME/.local/bin:$PATH:$HOME/bin:$HOME/.go/bin
 export GOPATH=$HOME/.go
 
-
-# Hook a go executable after creating
+export LD_PRELOAD=/usr/lib64/libstdc++.so.6:/lib64/libgcc_s.so.1
 
 bindkey '^[[5~' history-beginning-search-backward
 bindkey '^[[6~' history-beginning-search-forward

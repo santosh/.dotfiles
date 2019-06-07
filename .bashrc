@@ -28,6 +28,8 @@ blue="\[\033[0;34m\]"
 purple="\[\033[0;35m\]"
 reset="\[\033[0m\]"
 
+export LD_PRELOAD=/usr/lib64/libstdc++.so.6:/lib64/libgcc_s.so.1
+
 # Change command prompt
 source ~/.dotfiles/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
