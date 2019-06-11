@@ -2,7 +2,7 @@ mcd() {
     mkdir $1 && cd $1
 }
 
-alias ls='ls -AF --color=auto'
+alias ls='ls -cAF --color=auto'
 alias q='exit'
 alias balias='vi ~/.aliases && source ~/.aliases'
 alias rm='rm -rfv'
@@ -16,5 +16,6 @@ alias cp='cp -rv'
 alias wget='wget --continue'
 alias vi='vim'
 alias tree="tree -I '__pycache__'"  # use pipe as delim
+alias cat='bat'
 
 # vim: ft=sh
