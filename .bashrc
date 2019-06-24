@@ -17,6 +17,9 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+# Don't want for session to edit to append to history
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 # added by Anaconda3 installer
 export PATH="$HOME/anaconda3/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH:$HOME/bin
