@@ -15,7 +15,8 @@ alias shutdown='sudo shutdown --poweroff now'
 alias cp='cp -rv'
 alias wget='wget --continue'
 alias vi='vim'
-alias tree="tree -I '__pycache__'"  # use pipe as delim
+alias tree="tree -I '__pycache__|*pyc'"  # use pipe as delim
 alias cat='bat'
+alias j='jobs'
 
 # vim: ft=sh
