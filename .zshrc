@@ -1,10 +1,3 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -19,12 +12,10 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-export EDITOR=vim
-
-export PATH=$HOME/.local/bin:$PATH:$HOME/bin:$HOME/.go/bin
-export GOPATH=$HOME/.go
-
-export LD_PRELOAD=/usr/lib64/libstdc++.so.6:/lib64/libgcc_s.so.1
+if [ -f ~/.dotfiles/common.sh ]; then
+    . ~/.dotfiles/common.sh
+fi
 
 bindkey '^[[5~' history-beginning-search-backward
 bindkey '^[[6~' history-beginning-search-forward
+
