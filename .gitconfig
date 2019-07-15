@@ -12,6 +12,7 @@
 [alias]
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
     ls = "status"
+    pushall = "!git remote | xargs -L1 git push --all"
 [http]
 	cookiefile = /home/sntshk/.gitcookies
 [filter "lfs"]
