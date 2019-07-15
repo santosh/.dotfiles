@@ -18,5 +18,8 @@ alias vi='vim'
 alias tree="tree -I '__pycache__|*pyc'"  # use pipe as delim
 alias cat='bat'
 alias j='jobs'
+alias em='emacs 2> /dev/null'
+alias tm='tmux'
+alias ci='code-insiders'
 
 # vim: ft=sh
