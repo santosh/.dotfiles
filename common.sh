@@ -19,9 +19,6 @@ export PATH=$PATH:$HOME/.go/bin
 
 export LD_PRELOAD=/usr/lib64/libstdc++.so.6:/lib64/libgcc_s.so.1
 
-# Launch tmux as soon as shell starts
-[[ $TERM != "screen"  ]] && exec tmux
-
 # As we are inside tmux, let terminal support 256 colors,
 # so vim can show colorschemes properly inside tmux
 if [[ $TERM == screen  ]]; then TERM=screen-256color; fi
