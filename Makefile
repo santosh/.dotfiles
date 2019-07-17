@@ -1,12 +1,12 @@
 # Kickstarter to everything.
 
 clean:
-	unlink ~/.zshrc
-	unlink ~/.bashrc
-	unlink ~/.aliases
-	unlink ~/.gitconfig
-	unlink ~/.tmux.conf
-	unlink ~/.config/Code/User/settings.json
+	[ -f ~/.zshrc ] && unlink ~/.zshrc
+	[ -f ~/.bashrc ] && unlink ~/.bashrc
+	[ -f ~/.aliases ] && unlink ~/.aliases
+	[ -f ~/.gitconfig ] && unlink ~/.gitconfig
+	[ -f ~/.tmux.conf ] && unlink ~/.tmux.conf
+	[ -f ~/.config/Code/User/settings.json ] && unlink ~/.config/Code/User/settings.json
 
 install:
 	ln -sf ~/.dotfiles/.zshrc ~/.zshrc
