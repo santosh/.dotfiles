@@ -14,7 +14,7 @@ if [ -f ~/.aliases ]; then
 fi
 
 # User specific aliases and functions
-if [ -f ~/.dofiles/common.sh ]; then
+if [ -f ~/.dotfiles/common.sh ]; then
     . ~/.dotfiles/common.sh
 fi
 
