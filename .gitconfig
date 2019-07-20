@@ -11,8 +11,10 @@
 	tool = vimdiff
 [alias]
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
-    ls = "status"
+    l =  log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'  -n 15
+    ls = status
     pushall = "!git remote | xargs -L1 git push --all"
+    g = grep --break --heading --line-number
 [http]
 	cookiefile = /home/sntshk/.gitcookies
 [filter "lfs"]
@@ -22,3 +24,6 @@
 	required = true
 [difftool]
 	prompt = false
+[grep]
+	extendRegexp = true
+	lineNumber = true
