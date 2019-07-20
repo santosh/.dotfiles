@@ -14,7 +14,7 @@ install:
 	ln -sf ~/.dotfiles/.aliases ~/.aliases
 	ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 	ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
-	mkdir ~/.config/Code/User
+	mkdir -p ~/.config/Code/User
 	ln -sf ~/.dotfiles/.config/Code/User/settings.json ~/.config/Code/User/settings.json
 	echo "Done installing dotfiles."
 
