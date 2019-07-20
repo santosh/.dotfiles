@@ -15,6 +15,7 @@
     ls = status
     pushall = "!git remote | xargs -L1 git push --all"
     g = grep --break --heading --line-number
+    clean = clean -d
 [http]
 	cookiefile = /home/sntshk/.gitcookies
 [filter "lfs"]
@@ -27,3 +28,5 @@
 [grep]
 	extendRegexp = true
 	lineNumber = true
+[clean]
+    requireForce = false
