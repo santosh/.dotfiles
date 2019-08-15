@@ -11,7 +11,7 @@
 	tool = vimdiff
 [alias]
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
-    l =  log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'  -n 15
+    l =  log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     ls = status
     pushall = "!git remote | xargs -L1 git push --all"
     g = grep --break --heading --line-number
@@ -30,3 +30,8 @@
 	lineNumber = true
 [clean]
     requireForce = false
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
