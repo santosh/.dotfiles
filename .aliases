@@ -2,25 +2,23 @@ mcd() {
     mkdir $1 && cd $1
 }
 
-alias ls='ls -cAF --color=auto'
+alias ls='/usr/bin/ls -cAF --color=auto'
 alias q='exit'
+alias vi='/usr/bin/vim'
 alias balias='vi ~/.aliases && source ~/.aliases'
-alias rm='rm -rfv'
-alias py='python3'
-alias vimrc='vim ~/.vim/vimrc'
-alias mv='mv -v'
+alias rm='/usr/bin/rm -rfv'
+alias py='/usr/bin/python3'
+alias vimrc='vi ~/.vim/vimrc'
+alias mv='/usr/bin/mv -v'
 alias 3='/home/santosh/bin/python3'
-alias 2='python2'
-alias shutdown='sudo shutdown --poweroff now'
-alias cp='cp -rv'
+alias 2='/usr/bin/python2'
+alias cp='/usr/bin/cp -rv'
 alias wget='wget --continue'
-alias vi='vim'
 alias tree="tree -I '__pycache__|*pyc'"  # use pipe as delim
 alias cat='bat'
 alias j='jobs'
 alias em='emacs 2> /dev/null'
-alias tm='tmux'
-alias ci='code-insiders'
+alias tm='/usr/bin/tmux'
 alias vm='virtualboxvm --separate --startvm'  # pass machine name to vm
 
 # vim: ft=sh
