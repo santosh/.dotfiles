@@ -16,7 +16,7 @@
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
     "breadcrumbs.enabled": true,
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "One Dark Pro",
     "explorer.confirmDelete": false,
     "git.autofetch": true,
     "editor.wordWrap": "on",
@@ -42,4 +42,7 @@
     "vsicons.dontShowNewVersionMessage": true,
     // Make CapsLock:Escape swapping work: https://github.com/microsoft/vscode/issues/23991
     "keyboard.dispatch": "keyCode",
+    "rust-client.channel": "stable",
+    "editor.formatOnSave": true,
+    "extensions.ignoreRecommendations": false
 }
