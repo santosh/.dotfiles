@@ -14,8 +14,8 @@ export PATH=$HOME/rez/bin/rez:$PATH
 # added by Anaconda3 installer
 export PATH="$HOME/anaconda3/bin:$PATH"
 
-export GOPATH=$HOME/.go
-export PATH=$PATH:$HOME/.go/bin
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$PATH:/var/lib/snapd/snap/bin
 
 export LD_PRELOAD=/usr/lib64/libstdc++.so.6:/lib64/libgcc_s.so.1
