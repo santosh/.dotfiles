@@ -20,6 +20,7 @@ fi
 
 # Don't want for session to edit to append to history
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+shopt -s autocd
 
 # colors!
 red="\[\033[0;31m\]"

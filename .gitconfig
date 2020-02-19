@@ -13,6 +13,7 @@
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
     l =  log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     ls = status
+    commit = commit -v
     pushall = "!git remote | xargs -L1 git push --all"
     g = grep --break --heading --line-number
     clean = clean -d
