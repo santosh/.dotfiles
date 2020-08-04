@@ -15,8 +15,14 @@ export PATH=$HOME/rez/bin/rez:$PATH
 export PATH="$HOME/anaconda3/bin:$PATH"
 
 export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$(go env GOPATH)/bin
+export GOBIN=$GOPATH/bin
+export GOSRC=$GOPATH/src
+export PATH=$PATH:$GOBIN
 export PATH=$PATH:/var/lib/snapd/snap/bin
+
+# colon separated list of path, for every subdir in any of the path listed below
+# you don't need to mention full path.
+export CDPATH=$GOSRC
 
 export LD_PRELOAD=/usr/lib64/libstdc++.so.6:/lib64/libgcc_s.so.1
 
