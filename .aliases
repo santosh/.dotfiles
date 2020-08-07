@@ -2,9 +2,15 @@ mcd() {
     mkdir $1 && cd $1
 }
 
+go_test() {
+  go test $* | sed ''/PASS/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/SKIP/s//$(printf "\033[34mSKIP\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | GREP_COLOR="01;33" egrep --color=always '\s*[a-zA-Z0-9\-_.]+[:][0-9]+[:]|^'
+}
+
 alias ls='/usr/bin/ls -cAF --color=auto'
 alias q='exit'
-alias vi='/usr/bin/vim'
+alias vi='/usr/bin/vimx'
+alias vim=vi
+alias k='kwrite'
 alias balias='vi ~/.aliases && source ~/.aliases'
 alias rm='/usr/bin/rm -rfv'
 alias py='/usr/bin/python3'
@@ -20,5 +26,7 @@ alias j='jobs'
 alias em='emacs 2> /dev/null'
 alias tm='/usr/bin/tmux'
 alias vm='virtualboxvm --separate --startvm'  # pass machine name to vm
+alias git='hub'
+alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
 
 # vim: ft=sh

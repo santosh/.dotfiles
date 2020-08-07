@@ -9,7 +9,6 @@
     "workbench.startupEditor": "newUntitledFile",
     "window.zoomLevel": 0,
     "editor.mouseWheelZoom": true,
-    "workbench.iconTheme": "vscode-icons",
     "window.titleBarStyle": "custom",
     "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "workbench.sideBar.location": "left",
@@ -39,7 +38,6 @@
     },
     "files.insertFinalNewline": true,
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
-    "vsicons.dontShowNewVersionMessage": true,
     // Make CapsLock:Escape swapping work: https://github.com/microsoft/vscode/issues/23991
     "keyboard.dispatch": "keyCode",
     "rust-client.channel": "stable",
@@ -97,6 +95,10 @@
     ],
     "go.useLanguageServer": true,
     "grammarly.userWords": [
-        "golang"
+        "golang",
+        "gophercises"
     ],
+    "python.languageServer": "Microsoft",
+    "python.showStartPage": false,
+    "aws.profile": "profile:default"
 }

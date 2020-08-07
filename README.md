@@ -23,7 +23,7 @@ Bootstrap will do the following steps, chronologically. Bootstrap needs to be ru
 - `dnf update`
 - Group install **Developer Tools**
 - zsh
-- Intall Docker
+- Install Docker
 - VSCode
 - Install Fira Code
 - Chrome
