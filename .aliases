@@ -28,5 +28,6 @@ alias tm='/usr/bin/tmux'
 alias vm='virtualboxvm --separate --startvm'  # pass machine name to vm
 alias git='hub'
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
+alias python3='docker run -it --rm python:rc python'
 
 # vim: ft=sh
