@@ -1,53 +1,50 @@
-# dotfiles
+# .dotfiles
 
-Create symlink to homedir. Leave the folder as .dotfiles. GitLab at the moment doesn't allow dot (.) at start of project name.
+This repository holds my configuration files dating back to the time I started using Linux and found that I can keep the configuration persistent over multiple systems or multiple installations.
+
+## What I use
+
+The distro of my choice is [Fedora with KDE](https://spins.fedoraproject.org/kde/) 
+being the desktop environment of choice. Some notable application I use is:
+
+- Docker
+- ZSH
+- VS Code
+- FiraCode
+- Google Chrome
+- VLC
+- ...
+
+A full list can be found inside [./bootstrap/fedora.sh](./bootstrap/fedora.sh) file.
+The bootstrap also removes some clutter along with installing packages.
+
+## How to use
+
+1. Clone this repo to ~/.dotfiles:
+
+```
+git clone https://github.com/santosh/.dotfiles ~/.dotfiles
+```
+
+2. `cd` into the directory and run the following command and wait until 
+installation.
+
+```
+make install
+make bootstrap_fedora
+```
+This should set up most of the stuff. If not, please open an issue.
 
 ## Before and After Drill
 
 If you are reinstalling a fresh version of Fedora from scratch.
 
-- [ ] Commit this repo.
-- [ ] Take note of extra folders inside home directory
-- [ ] Backup files in /home/ to unaffected partition.
-- [ ] backup gpg and ssh keys
+- [ ] Commit this repo. Push to the remote.
+- [ ] Take note of extra folders inside the home directory.
+- [ ] Backup files in `/home/` to unaffected partition.
 
-Do this after the installation.
+After the reinstall, restore `/home/`.
 
-- [ ] Restore files to /home/
-- [ ] restore gpg and ssh keys
+## TODO
 
-## Generic Software Installation
-
-Bootstrap will do the following steps, chronologically. Bootstrap needs to be run as root.
-
-- `dnf update`
-- Group install **Developer Tools**
-- zsh
-- Install Docker
-- VSCode
-- Install Fira Code
-- Chrome
-
-Bootstrap removes following from base installation of Fedora to lower bandwidth when updating system.
-
-- Firefox
-
-*Makefile* does following actions. Those are kept separate from bootstrap because they work in userspace.
-
-- Configure zsh with presto
-
-These software are not common and I have left them to install manually on first need due to installation complexity and/or high bandwidth needs.
-
-- Zoom
-- GIMP *(`sudo dnf install gimp`)*
-- Teamviewer
-- Skype
-- VirtualBox
-
-## Additional manual settings
-
-There have potencial to be automated.
-
-- If KDE, https://www.youtube.com/watch?v=Ncd7Sg9mbAY&t=166s
-- Configure Fira Code in Konsole.
-- `usermod -aG docker your-user` to use docker without sudo.
+- [ ] Extend the bootstrap to include [.vim](https://github.com/santosh/.vim).
