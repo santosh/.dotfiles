@@ -1,5 +1,8 @@
 # Kickstarter to everything.
 
+nothing:
+	echo Dry run.
+
 clean:
 	[ -f ~/.zshrc ] && unlink ~/.zshrc
 	[ -f ~/.bashrc ] && unlink ~/.bashrc
@@ -15,3 +18,5 @@ install:
 	ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
 	echo "Done installing dotfiles."
 
+bootstrap_fedora:
+	sudo bash bootstrap/fedora.sh
