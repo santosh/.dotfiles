@@ -16,7 +16,7 @@ alias rm='/usr/bin/rm -rfv'
 alias py='/usr/bin/python3'
 alias vimrc='vi ~/.vim/vimrc'
 alias mv='/usr/bin/mv -v'
-alias 3='/home/santosh/bin/python3'
+alias 3='/home/$USER/bin/python3'
 alias 2='/usr/bin/python2'
 alias cp='/usr/bin/cp -rv'
 alias wget='wget --continue'
@@ -28,5 +28,6 @@ alias tm='/usr/bin/tmux'
 alias vm='virtualboxvm --separate --startvm'  # pass machine name to vm
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
 alias python3='docker run -it --rm python:rc python'
+alias myinstances="aws ec2 describe-instances --query 'Reservations[*].Instances[*].{Type:InstanceType,Placement:Placement.AvailabilityZone,PrivateIP:PrivateIpAddress,PublicIP:PublicIpAddress,State:State.Name,Arch:Architecture,CPU:CpuOptions.CoreCount,ThreadsPerCore:CpuOptions.ThreadsPerCore}' --output table"
 
 # vim: ft=sh
