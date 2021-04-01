@@ -8,7 +8,7 @@ go_test() {
 
 alias ls='/usr/bin/ls -cAF --color=auto'
 alias q='exit'
-alias vi='/usr/bin/vimx'
+alias vi='/usr/bin/vim'
 alias vim=vi
 alias k='kwrite'
 alias balias='vi ~/.aliases && source ~/.aliases'
@@ -27,7 +27,6 @@ alias em='emacs 2> /dev/null'
 alias tm='/usr/bin/tmux'
 alias vm='virtualboxvm --separate --startvm'  # pass machine name to vm
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
-alias python3='docker run -it --rm python:rc python'
-alias myinstances="aws ec2 describe-instances --query 'Reservations[*].Instances[*].{Type:InstanceType,Placement:Placement.AvailabilityZone,PrivateIP:PrivateIpAddress,PublicIP:PublicIpAddress,State:State.Name,Arch:Architecture,CPU:CpuOptions.CoreCount,ThreadsPerCore:CpuOptions.ThreadsPerCore}' --output table"
+alias myinstances="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceType,Placement.AvailabilityZone,PrivateIpAddress,PublicIpAddress,State.Name,Architecture,CpuOptions.CoreCount,CpuOptions.ThreadsPerCore}' --output table"
 
 # vim: ft=sh
