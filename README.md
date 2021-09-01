@@ -4,7 +4,9 @@ This repository holds my configuration files dating back to the time I started u
 
 ## What I use
 
-The distro of my choice is [Fedora with KDE](https://spins.fedoraproject.org/kde/) 
+### For desktop computer
+
+The distro of my choice is [Fedora with KDE](https://spins.fedoraproject.org/kde/)
 being the desktop environment of choice. Some notable application I use is:
 
 - Docker
@@ -18,7 +20,7 @@ being the desktop environment of choice. Some notable application I use is:
 A full list can be found inside [./bootstrap/fedora.sh](./bootstrap/fedora.sh) file.
 The bootstrap also removes some clutter along with installing packages.
 
-## How to use
+#### How to use
 
 1. Clone this repo to ~/.dotfiles:
 
@@ -26,16 +28,21 @@ The bootstrap also removes some clutter along with installing packages.
 git clone https://github.com/santosh/.dotfiles ~/.dotfiles
 ```
 
-2. `cd` into the directory and run the following command and wait until 
-installation.
+2. `cd` into the directory and run the following command and wait until
+   installation.
 
 ```
+cd ~/.dotfiles
 make install
+```
+
+If you want to additionally install packages, run the bootstrap scrit.
+
+```
 make bootstrap_fedora
 ```
-This should set up most of the stuff. If not, please open an issue.
 
-## Before and After Drill
+#### Before and After Drill
 
 If you are reinstalling a fresh version of Fedora from scratch.
 
@@ -45,6 +52,21 @@ If you are reinstalling a fresh version of Fedora from scratch.
 
 After the reinstall, restore `/home/`.
 
-## TODO
+### For cloud computer
 
-- [ ] Extend the bootstrap to include [.vim](https://github.com/santosh/.vim).
+Packages I typically install on a computer are:
+
+- Git
+- Vim
+- Go
+- tmux
+- tree
+- python3
+- git-lfs
+- htop
+- docker
+- bat
+
+A bootstrap script can be found in [./bootstrap/amaozon-linux.sh](./bootstrap/amaozon-linux.sh). One way to use this bootstrap is to run the script on a fresh instance and create a custom AMI out of it.
+
+What cofiguration do you use for your setup? Please let me know on twitter at [@sntshk](https://twitter.com/sntshk).
