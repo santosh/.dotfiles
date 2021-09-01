@@ -26,11 +26,6 @@ git clone https://github.com/santosh/.dotfiles.git
 cd .dotfiles
 make install
 
-cd ~
-git clone https://github.com/santosh/.vim.git
-cd .vim
-make install
-
 # Install bat
 cd /tmp
 LATEST_BAT_64_BIT=$(curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | \

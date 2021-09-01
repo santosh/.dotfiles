@@ -9,6 +9,7 @@ clean:
 	[ -f ~/.aliases ] && unlink ~/.aliases
 	[ -f ~/.gitconfig ] && unlink ~/.gitconfig
 	[ -f ~/.tmux.conf ] && unlink ~/.tmux.conf
+	[ -f ~/.vim ] && unlink ~/.vim
 
 install:
 	ln -sf ~/.dotfiles/.zshrc ~/.zshrc
@@ -16,6 +17,9 @@ install:
 	ln -sf ~/.dotfiles/.aliases ~/.aliases
 	ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 	ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
+	git clone https://github.com/santosh/.vim.git ~/.vim
+	cd ~/.vim && make install
+
 	echo "Done installing dotfiles."
 
 bootstrap_fedora:
