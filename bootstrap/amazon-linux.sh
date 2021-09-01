@@ -17,6 +17,9 @@ sudo groupadd docker
 sudo usermod -aG docker ec2-user
 sudo newgrp docker
 
+# Set upper limit to journalctl
+journalctl --vacuum-time=180d
+
 # Install dotfiles.
 cd ~
 git clone https://github.com/santosh/.dotfiles.git
