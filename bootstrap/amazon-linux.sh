@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Note: This script is intended to run in an interactive shell. 
 # Use this script to create fresh bootstrapped image.
 
 sudo yum update -y -q
@@ -35,3 +36,13 @@ curl -sLO $LATEST_BAT_64_BIT
 tar -xvf bat* && cd bat*
 mkdir -p ~/bin && mv bat ~/bin
 cd ~ && rm /tmp/bat*
+
+# Change SSH Port
+
+echo -n "ENTER a random port number: "
+read SSH_PORT
+if [[ ! $SSH_PORT =~ ^[0-9]+$ ]] ; then
+    echo "SSH port number must be an positive integer."
+    exit
+fi
+sed -i.bak "s/#Port 22/Port $SSH_PORT/g" /etc/ssh/sshd_config
