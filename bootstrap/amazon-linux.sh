@@ -15,6 +15,9 @@ sudo yum install vim-X11 golang docker tmux tree python3 git-lfs htop -y -q
 echo Done installing packages.
 
 # Configure initial tools
+sudo echo '{ "data-root": "/efs/system/docker/data-root"  }' > /etc/docker/daemon.json
+# Mounting the efs is the first thing you should do before starting the daemon in production environment.
+
 sudo systemctl start docker
 sudo systemctl enable docker
 
