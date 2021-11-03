@@ -14,10 +14,14 @@ export PATH=$HOME/rez/bin/rez:$PATH
 # added by Anaconda3 installer
 export PATH="$HOME/anaconda3/bin:$PATH"
 
-export GOPATH=$(go env GOPATH)
-export GOBIN=$GOPATH/bin
-export GOSRC=$GOPATH/src
-export PATH=$PATH:$GOBIN
+# Check if go is installed, then set go related vars
+if [ -x "$(command -v go)" ]; then
+    export GOPATH=$(go env GOPATH)
+    export GOBIN=$GOPATH/bin
+    export GOSRC=$GOPATH/src
+    export PATH=$PATH:$GOBIN
+fi
+
 export PATH=$PATH:/var/lib/snapd/snap/bin
 
 # colon separated list of path, for every subdir in any of the path listed below
