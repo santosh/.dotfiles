@@ -28,7 +28,10 @@ export PATH=$PATH:/var/lib/snapd/snap/bin
 # you don't need to mention full path.
 export CDPATH=$GOSRC
 
-export LD_PRELOAD=/usr/lib64/libstdc++.so.6:/lib64/libgcc_s.so.1
+# On debian based systems, this value of LD_PRELOAD shows errors
+if [ -x "$(grep -q rhel /etc/os-release)" ]; then
+    export LD_PRELOAD=/usr/lib64/libstdc++.so.6:/lib64/libgcc_s.so.1
+fi
 
 # As we are inside tmux, let terminal support 256 colors,
 # so vim can show colorschemes properly inside tmux
