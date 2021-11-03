@@ -21,12 +21,18 @@ alias 2='/usr/bin/python2'
 alias cp='/usr/bin/cp -rv'
 alias wget='wget --continue'
 alias tree="tree -I '__pycache__|*pyc'"  # use pipe as delim
-alias cat='bat -p'
 alias j='jobs'
 alias em='emacs 2> /dev/null'
 alias t='/usr/bin/tmux att'
 alias vm='virtualboxvm --separate --startvm'  # pass machine name to vm
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
 alias myinstances="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceType,Placement.AvailabilityZone,PrivateIpAddress,PublicIpAddress,State.Name,Architecture,CpuOptions.CoreCount,CpuOptions.ThreadsPerCore}' --output table"
+
+# On Debian based systems, bat is batcat
+if [ -f "/etc/debian_version" ]; then
+    alias cat='batcat -p'
+else
+    alias cat='bat -p'
+fi
 
 # vim: ft=sh
