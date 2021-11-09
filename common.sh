@@ -16,7 +16,13 @@ export PATH="$HOME/anaconda3/bin:$PATH"
 
 # Check if go is installed, then set go related vars
 if [ -x "$(command -v go)" ]; then
-    export GOPATH=$(go env GOPATH)
+    # If host system is Amazon Linux, GOPATH should go in /efs
+    if uname -r | grep -q 'amzn'; then
+        export GOPATH=/efs/system/go
+    else
+        export GOPATH=$(go env GOPATH)
+    fi
+
     export GOBIN=$GOPATH/bin
     export GOSRC=$GOPATH/src
     export PATH=$PATH:$GOBIN
