@@ -6,10 +6,14 @@ export PAGER=less
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-export PATH=$HOME/.local/bin:$PATH
+# For user level installation
+PATH=$HOME/.local/bin:$PATH
+
+# For system level installtation by privileged user
+PATH=$PATH:/usr/local/go/bin
 
 # Only if you install your rez at $HOME/rez
-export PATH=$HOME/rez/bin/rez:$PATH
+PATH=$HOME/rez/bin/rez:$PATH
 
 # Check if go is installed, then set go related vars
 if [ -x "$(command -v go)" ]; then
@@ -22,7 +26,7 @@ if [ -x "$(command -v go)" ]; then
 
     export GOBIN=$GOPATH/bin
     export GOSRC=$GOPATH/src
-    export PATH=$PATH:$GOBIN
+    PATH=$PATH:$GOBIN
 fi
 
 export PATH=$PATH:/var/lib/snapd/snap/bin
