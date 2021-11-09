@@ -6,13 +6,10 @@ export PAGER=less
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-export PATH=$HOME/.local/bin:$PATH:$HOME/bin
+export PATH=$HOME/.local/bin:$PATH
 
 # Only if you install your rez at $HOME/rez
 export PATH=$HOME/rez/bin/rez:$PATH
-
-# added by Anaconda3 installer
-export PATH="$HOME/anaconda3/bin:$PATH"
 
 # Check if go is installed, then set go related vars
 if [ -x "$(command -v go)" ]; then
