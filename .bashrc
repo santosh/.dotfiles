@@ -37,7 +37,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
 # '\W' adds the name of the current directory
-export PS1="$purple\u$reset at $yellow\h$reset in $green\w$green\$(__git_ps1) \\$ $reset"
+export PS1="$purple\u$reset at $yellow\h$reset in $green\w$green\$(__git_ps1) \n\\$ $reset"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
