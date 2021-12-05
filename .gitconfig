@@ -14,6 +14,7 @@
     l =  log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     ls = status
     commit = commit -v
+    clone = clone --depth 50
     pushall = "!git remote | xargs -L1 git push --all"
     g = grep --break --heading --line-number
     clean = clean -d
