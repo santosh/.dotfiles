@@ -40,8 +40,8 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="$purple\u$reset at $yellow\h$reset in $green\w$green\$(__git_ps1) \n\\$ $reset"
 
 export ASDF_DIR="$HOME/.asdf"
-[ -s "$ASDF_DIR/.asdf/asdf.sh" ] && \. "$ASDF_DIR/.asdf/asdf.sh"
-[ -s "$ASDF_DIR/.asdf/completions/asdf.bash" ] && \. "$ASDF_DIR/.asdf/asdf.sh"
+[ -s "$ASDF_DIR/asdf.sh" ] && \. "$ASDF_DIR/asdf.sh"
+[ -s "$ASDF_DIR/completions/asdf.bash" ] && \. "$ASDF_DIR/asdf.sh"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
