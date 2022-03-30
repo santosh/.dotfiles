@@ -22,11 +22,11 @@ function installDocker() {
     apt install docker-ce docker-ce-cli containerd.io -y
 
     grep -q -E "^docker:" /etc/group || groupadd docker
-    usermod -aG docker ec2-user
+    usermod -aG docker ubuntu
 }
 
 installDocker
-apt install bat
+apt install nfs-common build-essential bat
 
 # Set upper limit to journalctl
 journalctl --vacuum-time=180d
@@ -39,5 +39,4 @@ if [[ ! $SSH_PORT =~ ^[0-9]+$  ]] ; then
 fi
 sed -i.bak "s/#Port 22/Port $SSH_PORT/g" /etc/ssh/sshd_config
 
-# Install dotfiles
-git clone https://github.com/santosh/.dotfiles.git /home/ubuntu/.dotfiles
+apt autoremove
