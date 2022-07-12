@@ -18,8 +18,15 @@ if [ -f ~/.dotfiles/common.sh ]; then
     . ~/.dotfiles/common.sh
 fi
 
+# Manage HISTORY
 # Don't want for session to edit to append to history
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export HISTCONTROL="ignoredups:ignorespace"
+export HISTIGNORE="ls:mcd"
+export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S "
+export HISTSIZE=5000
+
+
 shopt -s autocd
 
 # colors!
