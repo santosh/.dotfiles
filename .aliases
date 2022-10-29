@@ -8,7 +8,7 @@ go_test() {
 
 alias ls='/usr/bin/ls -cAF --color=auto'
 alias q='exit'
-alias vi='/usr/bin/vim'
+alias vi='/usr/bin/nvim'
 alias vim=vi
 alias k='kwrite'
 alias balias='vi ~/.aliases && source ~/.aliases'
@@ -16,17 +16,18 @@ alias rm='/usr/bin/rm -rfv'
 alias py='/usr/bin/python3'
 alias vimrc='vi ~/.vim/vimrc'
 alias mv='/usr/bin/mv -v'
-alias 3='/home/$USER/bin/python3'
-alias 2='/usr/bin/python2'
 alias cp='/usr/bin/cp -rv'
 alias wget='wget --continue'
+alias ffmpeg='ffmpeg -hide_banner'
 alias tree="tree -I '__pycache__|*pyc'"  # use pipe as delim
 alias j='jobs'
 alias em='emacs 2> /dev/null'
 alias t='/usr/bin/tmux att'
 alias vm='virtualboxvm --separate --startvm'  # pass machine name to vm
+alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
+alias cotu='docker run --rm -it sntshk/cotu'
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
-alias myinstances="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceType,Placement.AvailabilityZone,PrivateIpAddress,PublicIpAddress,State.Name,Architecture,CpuOptions.CoreCount,CpuOptions.ThreadsPerCore]' --output table"
+alias myinstances="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceType,Placement.AvailabilityZone,PrivateIpAddress,PublicIpAddress,State.Name,Architecture,CpuOptions.CoreCount,InstanceId]' --output table"
 alias efsmount='sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-de09280f.efs.ap-south-1.amazonaws.com:/ /efs'
 
 # On Debian based systems, bat is batcat
