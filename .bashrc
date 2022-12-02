@@ -54,3 +54,7 @@ export ASDF_DIR="$HOME/.asdf"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if [[ $(type -t "__vte_prompt_command") != function ]]; then
+	unset PROMPT_COMMAND
+fi
