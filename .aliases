@@ -8,7 +8,7 @@ go_test() {
 
 alias ls='/usr/bin/ls -cAF --color=auto'
 alias q='exit'
-alias vi='/usr/bin/nvim'
+alias vi='/usr/bin/vim'
 alias vim=vi
 alias k='kwrite'
 alias balias='vi ~/.aliases && source ~/.aliases'
