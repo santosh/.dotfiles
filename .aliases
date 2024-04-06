@@ -1,40 +1,38 @@
 mcd() {
-    mkdir $1 && cd $1
+	mkdir $1 && cd $1
 }
 
-go_test() {
-  go test $* | sed ''/PASS/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/SKIP/s//$(printf "\033[34mSKIP\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | GREP_COLOR="01;33" egrep --color=always '\s*[a-zA-Z0-9\-_.]+[:][0-9]+[:]|^'
-}
-
-alias ls='/usr/bin/ls -cAF --color=auto'
-alias q='exit'
-alias vi='/usr/bin/vim'
-alias vim=vi
+alias j='jobs'
 alias k='kwrite'
-alias balias='vi ~/.aliases && source ~/.aliases'
+alias q='exit'
+alias r='ranger'
+alias t='/usr/bin/tmux att'
+alias ls='/usr/bin/ls -cAF --color=auto'
+alias vi='/usr/bin/nvim'
+alias em='emacs 2> /dev/null'
+alias vm='virtualboxvm --separate --startvm' # pass machine name to vm
 alias rm='/usr/bin/rm -rfv'
 alias py='/usr/bin/python3'
-alias vimrc='vi ~/.vim/vimrc'
 alias mv='/usr/bin/mv -v'
 alias cp='/usr/bin/cp -rv'
+alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
+alias cat='bat -p --theme=gruvbox-dark'
+alias vim='vi'
 alias wget='wget --continue'
-alias ffmpeg='ffmpeg -hide_banner'
-alias tree="tree -I '__pycache__|*pyc'"  # use pipe as delim
-alias j='jobs'
-alias em='emacs 2> /dev/null'
-alias t='/usr/bin/tmux att'
-alias vm='virtualboxvm --separate --startvm'  # pass machine name to vm
+alias tree="tree -I '__pycache__|*pyc'" # use pipe as delim
 alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
 alias cotu='docker run --rm -it sntshk/cotu'
-alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
+alias vimrc='vi ~/.vim/vimrc'
+alias ffmpeg='ffmpeg -hide_banner'
+alias balias='vi ~/.aliases && source ~/.aliases'
 alias myinstances="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceType,Placement.AvailabilityZone,PrivateIpAddress,PublicIpAddress,State.Name,Architecture,CpuOptions.CoreCount,InstanceId]' --output table"
 alias efsmount='sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-de09280f.efs.ap-south-1.amazonaws.com:/ /efs'
 
 # On Debian based systems, bat is batcat
 if [ -f "/etc/debian_version" ]; then
-    alias cat='batcat -p'
-else
-    alias cat='bat -p'
+	alias cat='batcat -p'
+elif [ -f "/etc/arch-release" ]; then
+	alias mpv='mpv --vo=kitty'
 fi
 
 # vim: ft=sh
