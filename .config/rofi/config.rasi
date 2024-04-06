@@ -1,0 +1,9 @@
+configuration {
+    display-drun: "Applications:";
+    display-window: "Windows:";
+    modi: "window,run,drun";
+    font: "Monospace 19";
+}
+
+@theme "/usr/share/rofi/themes/purple.rasi"
+

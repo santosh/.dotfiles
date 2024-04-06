@@ -10,7 +10,10 @@ clean:
 	[ -f ~/.gitconfig ] && unlink ~/.gitconfig
 	[ -f ~/.inputrc ] && unlink ~/.inputrc
 	[ -f ~/.tmux.conf ] && unlink ~/.tmux.conf
-	[ -f ~/.vim ] && unlink ~/.vim
+	[ -f ~/.config/nvim ] && unlink ~/.config/nvim
+	[ -f ~/.config/hypr ] && unlink ~/.config/hypr
+	[ -f ~/.config/rofi ] && unlink ~/.config/rofi
+	[ -f ~/.config/waybar ] && unlink ~/.config/waybar
 
 install:
 	ln -sf ~/.dotfiles/.zshrc ~/.zshrc
@@ -19,8 +22,10 @@ install:
 	ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 	ln -sf ~/.dotfiles/.inputrc ~/.inputrc
 	ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
-	git clone https://github.com/santosh/.vim.git ~/.vim
-	cd ~/.vim && make install
+	ln -sf ~/.dotfiles/.config/hypr ~/.config/hypr
+	ln -sf ~/.dotfiles/.config/rofi ~/.config/rofi
+	ln -sf ~/.dotfiles/.config/waybar ~/.config/waybar
+	git clone https://github.com/santosh/nvim.git ~/.config/nvim
 
 	echo "Done installing dotfiles."
 
