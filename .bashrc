@@ -10,12 +10,12 @@ fi
 
 # User specific aliases and functions
 if [ -f ~/.aliases ]; then
-    . ~/.aliases
+	. ~/.aliases
 fi
 
 # User specific aliases and functions
 if [ -f ~/.dotfiles/common.sh ]; then
-    . ~/.dotfiles/common.sh
+	. ~/.dotfiles/common.sh
 fi
 
 # Manage HISTORY
@@ -25,7 +25,6 @@ export HISTCONTROL="ignoredups:ignorespace"
 export HISTIGNORE="ls:mcd"
 export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S "
 export HISTSIZE=5000
-
 
 shopt -s autocd
 
@@ -52,8 +51,8 @@ export ASDF_DIR="$HOME/.asdf"
 [ -s "$ASDF_DIR/completions/asdf.bash" ] && \. "$ASDF_DIR/asdf.sh"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 if [[ $(type -t "__vte_prompt_command") != function ]]; then
 	unset PROMPT_COMMAND
