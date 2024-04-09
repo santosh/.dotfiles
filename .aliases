@@ -18,6 +18,7 @@ alias cp='/usr/bin/cp -rv'
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
 alias cat='bat -p --theme=gruvbox-dark'
 alias vim='vi'
+alias icat='kitty +kitten icat'
 alias wget='wget --continue'
 alias tree="tree -I '__pycache__|*pyc'" # use pipe as delim
 alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
