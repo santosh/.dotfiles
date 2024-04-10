@@ -3,7 +3,7 @@
 {
 	"layer": "top",
 	"position": "top",
-    "height": 60,
+	"height": 50,
 
 	"modules-left": [
 		"hyprland/workspaces",
@@ -21,6 +21,12 @@
 		"custom/right-arrow-dark"
 	],
 	"modules-right": [
+		"custom/left-arrow-dark",
+		"privacy",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"network",
+		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
@@ -73,6 +79,21 @@
 	"clock#3": {
 		"format": "{:%m-%d}",
 		"tooltip": false
+	},
+
+	"network": {
+		"interval": 5,
+		"format": " {bandwidthTotalBits}",
+		"tooltip-format": "{ifname} on {ipaddr} 󰊗"
+	},
+
+	"privacy": {
+		"icon-size": 30,
+		"modules": [
+			{
+				"type": "screenshare"
+			}
+		]
 	},
 
 	"pulseaudio": {
