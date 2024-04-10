@@ -5,5 +5,4 @@ configuration {
     font: "Monospace 19";
 }
 
-@theme "/usr/share/rofi/themes/purple.rasi"
-
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
