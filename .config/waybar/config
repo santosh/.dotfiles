@@ -3,22 +3,12 @@
 {
 	"layer": "top",
 	"position": "top",
-	"height": 50,
 
 	"modules-left": [
 		"hyprland/workspaces",
 		"custom/right-arrow-dark"
 	],
 	"modules-center": [
-		"custom/left-arrow-dark",
-		"clock#1",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"clock#2",
-		"custom/right-arrow-dark",
-		"custom/right-arrow-light",
-		"clock#3",
-		"custom/right-arrow-dark"
 	],
 	"modules-right": [
 		"custom/left-arrow-dark",
@@ -31,19 +21,25 @@
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
+		"cpu",
+		"temperature",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
 		"memory",
 		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"cpu",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"battery",
-		"custom/left-arrow-light",
+		// "custom/left-arrow-dark",
+		// "battery",
+		// "custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"disk",
 		"custom/left-arrow-light",
+		// "custom/left-arrow-dark",
+		// "tray",
+		// "custom/left-arrow-light",
 		"custom/left-arrow-dark",
-		"tray"
+		"clock#1",
+		"clock#2",
+		"clock#3",
 	],
 
 	"custom/left-arrow-dark": {
@@ -97,12 +93,13 @@
 	},
 
 	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
+		"format": "{icon}{volume}% {format_source}",
 		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "MUTE",
+		"format-muted": " MUTE",
 		"format-icons": {
 			"headphones": "",
 			"default": [
+				"",
 				"",
 				""
 			]
@@ -112,13 +109,18 @@
 		"on-click-right": "pavucontrol"
 	},
 	"memory": {
-		"interval": 5,
+		"interval": 15,
 		"format": "Mem {}%"
 	},
 	"cpu": {
-		"interval": 5,
-		"format": "CPU {usage:2}%"
+		"interval": 15,
+		"format": "{usage}%"
 	},
+	"temperature": {
+			"thermal-zone": 1,
+			"interval": 15,
+			"format": "{temperatureC}°C",
+		},
 	"battery": {
 		"states": {
 			"good": 95,
@@ -135,8 +137,8 @@
 		]
 	},
 	"disk": {
-		"interval": 5,
-		"format": "Disk {percentage_used:2}%",
+		"interval": 3600,
+		"format": "{percentage_used}%",
 		"path": "/"
 	},
 	"tray": {
