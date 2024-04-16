@@ -4,23 +4,11 @@ This repository holds my configuration files dating back to the time I started u
 
 ## What I use
 
-### For desktop computer
+**For desktop computer**, there are 2 distros I'm using right now. One of my machine has an LTS version of Kubuntu 22.04. Another one is my experimental machine where I have Arch Linux installed. I'm trying Hyprland and ecosystem at the time of writing this.
 
-The distro of my choice is [Fedora with KDE](https://spins.fedoraproject.org/kde/)
-being the desktop environment of choice. Some notable application I use is:
+**For server**, I prefer Debian. I have a raspberry pi. As well as any vm I spawn on any cloud is Debian.
 
-- Docker
-- ZSH
-- VS Code
-- FiraCode
-- Google Chrome
-- VLC
-- ...
-
-A full list can be found inside [./bootstrap/fedora.sh](./bootstrap/fedora.sh) file.
-The bootstrap also removes some clutter along with installing packages.
-
-#### How to use
+## How to use
 
 1. Clone this repo to ~/.dotfiles:
 
@@ -35,38 +23,4 @@ git clone https://github.com/santosh/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 make install
 ```
-
-If you want to additionally install packages, run the bootstrap scrit.
-
-```
-make bootstrap_fedora
-```
-
-#### Before and After Drill
-
-If you are reinstalling a fresh version of Fedora from scratch.
-
-- [ ] Commit this repo. Push to the remote.
-- [ ] Take note of extra folders inside the home directory.
-- [ ] Backup files in `/home/` to unaffected partition.
-
-After the reinstall, restore `/home/`.
-
-### For cloud computer
-
-Packages I typically install on a computer are:
-
-- Git
-- Vim
-- Go
-- tmux
-- tree
-- python3
-- git-lfs
-- htop
-- docker
-- bat
-
-A bootstrap script can be found in [./bootstrap/amaozon-linux.sh](./bootstrap/amaozon-linux.sh). One way to use this bootstrap is to run the script on a fresh instance and create a custom AMI out of it.
-
-What cofiguration do you use for your setup? Please let me know on twitter at [@sntshk](https://twitter.com/sntshk).
+What configuration do you use for your setup? Please let me know on twitter at [@sntshk](https://twitter.com/sntshk).
