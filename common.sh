@@ -3,7 +3,7 @@
 
 export PAGER=less
 
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # For user level installation

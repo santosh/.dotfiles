@@ -1,44 +1,44 @@
 [user]
-	email = sntshkmr60@gmail.com
-	name = Santosh Kumar
+  email = sntshkmr60@gmail.com
+  name = Santosh Kumar
 [push]
-    default = current
+  default = current
 [color]
-    ui = auto
+  ui = auto
 [core]
-    editor = vim
+  editor = nvim
 [diff]
-	tool = vimdiff
+  tool = nvim -d
 [alias]
-	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
-    l =  log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-    ls = status
-    commit = commit -v
-    clone = clone --depth 50
-    pushall = "!git remote | xargs -L1 git push --all"
-    g = grep --break --heading --line-number
-    clean = clean -d
+  ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+  l =  log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  ls = status
+  commit = commit -v
+  clone = clone --depth 50
+  pushall = "!git remote | xargs -L1 git push --all"
+  g = grep --break --heading --line-number
+  clean = clean -d
 [http]
-	cookiefile = /home/sntshk/.gitcookies
-	postBuffer = 524288000
+  cookiefile = /home/sntshk/.gitcookies
+  postBuffer = 524288000
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [difftool]
-	prompt = false
+  prompt = false
 [grep]
-	extendRegexp = true
-	lineNumber = true
+  extendRegexp = true
+  lineNumber = true
 [clean]
-    requireForce = false
+  requireForce = false
 [merge]
-    tool = vimdiff
-    conflictstyle = diff3
+  tool = vimdiff
+  conflictstyle = diff3
 [mergetool]
-    prompt = false
+  prompt = false
 [remote "origin"]
-	prune = true
+  prune = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
