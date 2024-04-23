@@ -105,12 +105,11 @@
 			]
 		},
 		"scroll-step": 5,
-		"on-click": "pamixer -t",
 		"on-click-right": "pavucontrol"
 	},
 	"memory": {
 		"interval": 15,
-		"format": "Mem {}%"
+		"format": "{}%"
 	},
 	"cpu": {
 		"interval": 15,
