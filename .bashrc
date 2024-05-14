@@ -57,3 +57,7 @@ export NVM_DIR="$HOME/.nvm"
 if [[ $(type -t "__vte_prompt_command") != function ]]; then
 	unset PROMPT_COMMAND
 fi
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
