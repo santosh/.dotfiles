@@ -6,19 +6,19 @@ alias j='jobs'
 alias k='kwrite'
 alias q='exit'
 alias r='ranger'
+alias s='kitten ssh'
 alias t='/usr/bin/tmux att'
 alias ls='/usr/bin/ls -cAF --color=auto'
-alias vi='/usr/bin/nvim'
+alias ai='aichat'
 alias em='emacs 2> /dev/null'
-alias vm='virtualboxvm --separate --startvm' # pass machine name to vm
 alias rm='/usr/bin/rm -rfv'
 alias py='/usr/bin/python3'
 alias mv='/usr/bin/mv -v'
 alias cp='/usr/bin/cp -rv'
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
-alias cat='bat -p --theme=gruvbox-dark'
+alias cat='bat -p'
 alias vim='vi'
-alias icat='kitty +kitten icat'
+alias icat='kitten icat'
 alias wget='wget --continue'
 alias tree="tree -I '__pycache__|*pyc'" # use pipe as delim
 alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
@@ -32,8 +32,6 @@ alias efsmount='sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,ha
 # On Debian based systems, bat is batcat
 if [ -f "/etc/debian_version" ]; then
 	alias cat='batcat -p'
-elif [ -f "/etc/arch-release" ]; then
-	alias mpv='mpv --vo=kitty'
 fi
 
 # vim: ft=sh
