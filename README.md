@@ -10,6 +10,14 @@ This repository holds my configuration files dating back to the time I started u
 
 ## How to use
 
+### Prerequisites
+
+I believe that pre requisites are not worth mentioning here as they would keep changing. But it's worth mentioning that, if you encounter any command not found error, please install it. A few to name are: `fzf bat`
+
+For a sneak peak to what packages I use, have a look in .config directory as well as .aliases file.
+
+### Installation
+
 1. Clone this repo to ~/.dotfiles:
 
 ```

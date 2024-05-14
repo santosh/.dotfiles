@@ -36,5 +36,7 @@ fi
 # so vim can show colorschemes properly inside tmux
 if [[ $TERM == screen ]]; then TERM=screen-256color; fi
 
-# You may also want to source the completion script (for bash):
-# source /home/sntshk/rez-packages/completion/complete.sh
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# If using user level ranger config, avoid reloading the system one
+export RANGER_LOAD_DEFAULT_RC=FALSE
