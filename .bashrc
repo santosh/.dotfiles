@@ -60,6 +60,7 @@ fi
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+export FZF_DEFAULT_OPTS='--layout=reverse --border'
 
 # >>>> Vagrant command completion (start)
 . /opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/bash/completion.sh
