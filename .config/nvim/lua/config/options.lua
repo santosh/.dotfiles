@@ -10,3 +10,21 @@ opt.whichwrap:append({
   ["["] = true,
   ["]"] = true,
 })
+
+return {
+  {
+    "folke/noice.nvim",
+    require("noice").setup({
+      routes = {
+        {
+          filter = {
+            event = "msg_show",
+            kind = "",
+            find = "written",
+          },
+          opts = { skip = true },
+        },
+      },
+    }),
+  },
+}
