@@ -14,6 +14,7 @@ clean:
 	[ -f ~/.config/hypr ] && unlink ~/.config/hypr
 	[ -f ~/.config/rofi ] && unlink ~/.config/rofi
 	[ -f ~/.config/waybar ] && unlink ~/.config/waybar
+	[ -f ~/.config/dunst ] && unlink ~/.config/dunst
 	[ -f ~/.config/kitty ] && unlink ~/.config/kitty
 	[ -f ~/.config/mpv ] && unlink ~/.config/mpv
 	[ -f ~/.config/ranger ] && unlink ~/.config/ranger
@@ -30,6 +31,7 @@ install:
 	ln -sf ~/.dotfiles/.config/hypr ~/.config/hypr
 	ln -sf ~/.dotfiles/.config/rofi ~/.config/rofi
 	ln -sf ~/.dotfiles/.config/waybar ~/.config/waybar
+	ln -sf ~/.dotfiles/.config/dunst ~/.config/dunst
 	ln -sf ~/.dotfiles/.config/nvim ~/.config/nvim
 	ln -sf ~/.dotfiles/.config/bat ~/.config/bat
 	ln -sf ~/.dotfiles/.config/kitty ~/.config/kitty
