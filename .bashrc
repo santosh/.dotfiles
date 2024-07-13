@@ -22,7 +22,7 @@ fi
 # Don't want for session to edit to append to history
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export HISTCONTROL="ignoredups:ignorespace"
-export HISTIGNORE="ls:mcd"
+export HISTIGNORE="ls:mcd:mpv"
 export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S "
 export HISTSIZE=5000
 
@@ -46,6 +46,21 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # '\W' adds the name of the current directory
 export PS1="$purple\u$reset at $yellow\h$reset in $green\w$green\$(__git_ps1) \n\\$ $reset"
 
+# if [[ $(type -t "__vte_prompt_command") != function ]]; then
+# 	unset PROMPT_COMMAND
+# fi
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+export FZF_DEFAULT_OPTS='--layout=reverse --border'
+
+export KUBECONFIG=~/.kube/config
+export LFS="/mnt/lfs"
+
+# >>>> Vagrant command completion (start)
+. /opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/bash/completion.sh
+# <<<<  Vagrant command completion (end)
+
 export ASDF_DIR="$HOME/.asdf"
 [ -s "$ASDF_DIR/asdf.sh" ] && \. "$ASDF_DIR/asdf.sh"
 [ -s "$ASDF_DIR/completions/asdf.bash" ] && \. "$ASDF_DIR/asdf.sh"
@@ -54,14 +69,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-if [[ $(type -t "__vte_prompt_command") != function ]]; then
-	unset PROMPT_COMMAND
-fi
-
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
-export FZF_DEFAULT_OPTS='--layout=reverse --border'
-
-# >>>> Vagrant command completion (start)
-. /opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/bash/completion.sh
-# <<<<  Vagrant command completion (end)
+# pnpm
+export PNPM_HOME="/home/santosh/.local/share/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

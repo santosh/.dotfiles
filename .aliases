@@ -3,7 +3,7 @@ mcd() {
 }
 
 alias j='jobs'
-alias k='kwrite'
+alias k='kubectl'
 alias q='exit'
 alias r='ranger'
 alias s='kitten ssh'
@@ -17,15 +17,17 @@ alias mv='/usr/bin/mv -v'
 alias cp='/usr/bin/cp -rv'
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws:z -v $(pwd):/aws amazon/aws-cli'
 alias cat='bat -p'
-alias vim='vi'
+alias vim='nvim'
+alias htop='btop' # htop on steroids
 alias icat='kitten icat'
 alias wget='wget --continue'
 alias tree="tree -I '__pycache__|*pyc'" # use pipe as delim
 alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
 alias cotu='docker run --rm -it sntshk/cotu'
-alias vimrc='vi ~/.vim/vimrc'
+alias grep='grep -Ei --color=auto'
 alias ffmpeg='ffmpeg -hide_banner'
-alias balias='vi ~/.aliases && source ~/.aliases'
+alias balias='vim ~/.aliases && source ~/.aliases'
+# alias kubectl='minikube kubectl --'
 alias myinstances="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceType,Placement.AvailabilityZone,PrivateIpAddress,PublicIpAddress,State.Name,Architecture,CpuOptions.CoreCount,InstanceId]' --output table"
 alias efsmount='sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-de09280f.efs.ap-south-1.amazonaws.com:/ /efs'
 
