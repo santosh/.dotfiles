@@ -21,10 +21,10 @@
 
     ### Geometry ###
 
-    # dynamic width from 0 to 300
-    # width = (0, 300)
-    # constant width of 300
-    width = 300
+    # dynamic width from 0 to 500
+    width = (0, 500)
+    # constant width of 500
+    # width = 500
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 50x50
+    offset = 20x20
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -236,10 +236,10 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/rofi -dmenu -p "dunst:"
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/xdg-open
+    browser = /usr/bin/firefox
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -255,7 +255,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 20
+    corner_radius = 15
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -325,7 +325,7 @@
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#285577"
+    background = "#3C3836"
     foreground = "#ffffff"
     timeout = 10
     override_pause_level = 30
