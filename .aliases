@@ -26,6 +26,9 @@ alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wag
 alias cotu='docker run --rm -it sntshk/cotu'
 alias grep='grep -Ei --color=auto'
 alias ffmpeg='ffmpeg -hide_banner'
+alias claude='ai -m claude:claude-3-5-sonnet-20240620'
+alias chatgpt='ai -m openai:gpt-4o'
+alias gemini='ai -m gemini:gemini-1.0-pro-latest'
 alias balias='vim ~/.aliases && source ~/.aliases'
 # alias kubectl='minikube kubectl --'
 alias myinstances="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceType,Placement.AvailabilityZone,PrivateIpAddress,PublicIpAddress,State.Name,Architecture,CpuOptions.CoreCount,InstanceId]' --output table"
