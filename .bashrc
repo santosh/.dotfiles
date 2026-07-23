@@ -57,6 +57,11 @@ export FZF_DEFAULT_OPTS='--layout=reverse --border'
 export KUBECONFIG=~/.kube/config
 export LFS="/mnt/lfs"
 
+export OLLAMA_HOST=titan.rohu-nunki.ts.net
+
+# export LANG=en_US.UTF-8
+# export LC_ALL=en_US.UTF-8
+
 # >>>> Vagrant command completion (start)
 . /opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/bash/completion.sh
 # <<<<  Vagrant command completion (end)
